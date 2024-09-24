@@ -28,3 +28,34 @@ class Move:
                 return False
         
         return True
+
+class Player:
+
+    """
+    This class represents the player.
+
+    It is used to assign name, marker and fetch the move played.
+
+    """
+    
+    def __init__(self, name, flag=0):
+        
+        """
+        Initializes the Player Object.
+
+        Provides a maker and sets the name.
+        """
+
+        self.name = name
+
+        if flag==0:
+            self._marker = "O"
+        else:
+            self._marker = "X"
+ 
+    
+    def get_marker(self):
+        
+        """Returns the marker for the player"""
+
+        return self._marker
