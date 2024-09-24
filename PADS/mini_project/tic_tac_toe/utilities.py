@@ -76,3 +76,39 @@ class Board:
         self.game_board = [[0, 0, 0],
                            [0, 0, 0],
                            [0, 0, 0]]
+        
+    def print_board(self):
+        
+        """
+        Prints the current state of the board.
+        """
+
+        print("\nBoard:")
+
+        # Print the board row by row
+        for row in self.game_board:
+            print("|", end="")
+
+            for column in row:
+                if column == Board.EMPTY_CELL: # print blank space for empty column
+                    print("   |", end="")
+                
+                else: #print value (marker)
+                    print(f" {column} |", end="")
+
+             # break line       
+            print()
+
+        print()
+            
+    def print_board_with_positions(self):
+
+        """
+        Displays the allowed values on the board.
+        Each value has a row and column coordinate from (0 to 2)
+        """
+        print("\nPositions:")
+
+        print("| (0, 0) | (0, 1) | (0, 2) |\n\
+| (1, 0) | (1, 1) | (1, 2) |\n\
+| (2, 0) | (2, 1) | (2, 2) |\n")
