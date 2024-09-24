@@ -59,3 +59,20 @@ class Player:
         """Returns the marker for the player"""
 
         return self._marker
+    
+class Board:
+    
+    """
+    This class intializes a (3x3) borad.
+
+    It can print the allowed positions as well as the current state of the board.
+
+    It also checks if the game is over or not
+    """
+
+    EMPTY_CELL = 0 # used to check if board is empty
+ 
+    def __init__(self): # board intialization
+        self.game_board = [[0, 0, 0],
+                           [0, 0, 0],
+                           [0, 0, 0]]
