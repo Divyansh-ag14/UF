@@ -56,7 +56,7 @@ def main():
 
     # no customer with the entered id
     if not_found == len(customers):
-        print("\nNo customer with that ID.\n")
+        print("\nNo customer with that ID.")
 
 if __name__ == "__main__":
     
