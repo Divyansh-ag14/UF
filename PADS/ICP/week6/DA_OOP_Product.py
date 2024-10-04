@@ -30,4 +30,5 @@ class Movie(Product):
          self.__year = year
 
      def get_Description(self):
-        return (super().get_Description() + " (" + self.__year + ")")
+        return (super().get_Description() + " - (" + self.__year + ")")
+     
