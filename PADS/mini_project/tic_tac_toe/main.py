@@ -1,12 +1,17 @@
-# oop based project
+from game import TicTacToeGame
 
-def main():
-    pass
+def main(): 
+    game = TicTacToeGame()
+    game.start()
 
 if __name__ == "__main__":
-    choice = "y"
 
-    while choice.lower() == "y":
+    choice = "yes"
+    
+    while choice[0].lower() == "y":
         main()
-        choice = input("Want to play again? (y/n): ")
-        
+        choice = input("Do you want to play again? (y/n): ")
+    
+    print("\nHave a nice day! Follow me on insta @_______divyansh")
+
+
