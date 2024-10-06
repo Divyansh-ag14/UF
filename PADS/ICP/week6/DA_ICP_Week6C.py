@@ -25,7 +25,7 @@ class Character:
         print(f"{self.__name} attacks {target.__name} for {damage} damage!\n")
 
         if target.__hp <=0:
-            print(f"{target.__name} has been defeated!\n")
+            print(f"{target.__name} has been defeated!")
 
     def show_status(self):
 
@@ -33,7 +33,7 @@ class Character:
         Displays status of character.
         """
 
-        print(f"{self.__name}\n HP: {self.__hp}\n ATK: {self.__atk}\n Defense: {self.__defense}")
+        print(f"\n{self.__name}\n HP: {self.__hp}\n ATK: {self.__atk}\n Defense: {self.__defense}")
 
     def special_move(self, target):
         pass
@@ -56,18 +56,18 @@ class Hero(Character):
 
             heal = random.randint(50, 60)
             target.__hp+=heal
-            print(f"{self.__name} uses Healing, restoring {heal} HP to {target.__name}!\n")
+            print(f"{self._Character__name} uses Healing, restoring {heal} HP to {target._Character__name}!\n")
 
         if self.__role == "Warrior":
             
-            print(f"{self.__name} uses Valor, and deals triple damage!\n")
-            damage = max(0, self.__atk*3 - target.__defense)
-            target.__hp-=damage
+            print(f"{self._Character__name} uses Valor, and deals triple damage!\n")
+            damage = max(0, self._Character__atk*3 - target._Character__defense)
+            target._Character__hp-=damage
 
-            print(f"{self.name} attacks {target.__name} for {damage} damage!\n")
+            print(f"{self._Character__name} attacks {target._Character__name} for {damage} damage!\n")
 
-            if target.__hp <=0:
-                print(f"{target.__name} has been defeated!\n")
+            if target._Character__hp <=0:
+                print(f"{target._Character__name} has been defeated!")
 
 class Monster(Character):
 
@@ -83,10 +83,25 @@ class Monster(Character):
         """
         
         if self.__role == "Boss":
-            target.__atk = target.__atk / 2
+            target._Character__atk = target._Character__atk / 2
 
 def main():
-    pass
-        
-
     
+    hero = Hero(name="Archer", hp=100, atk=30, defense=10, role="Warrior")
+    monster = Monster(name="Dragon", hp=80, atk=25, defense=5, role="Boss")
+
+    hero.show_status()
+    monster.show_status()
+
+    hero.attack(monster)
+
+    monster.attack(hero)
+    hero.special_move(monster)
+
+    monster.special_move(hero)
+
+    hero.show_status()
+    monster.show_status()
+
+if __name__ == "__main__":
+    main()
