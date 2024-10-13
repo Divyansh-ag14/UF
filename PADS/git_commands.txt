@@ -1,0 +1,5 @@
+git add 
+git commit -m ""
+git push origin man
+git pull origin main
+
