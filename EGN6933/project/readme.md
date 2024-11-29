@@ -44,5 +44,22 @@ This project implements the game in Python, with additional functionality for ca
 5. The game continues until you guess the correct number (i.e., 4 bulls).
 6. After winning, the game will ask if you'd like to play again.
 
-## Example Gameplay
+
+## Entropy Calculation
+
+The entropy calculation is used to measure the uncertainty of the remaining possible secret numbers. This value is computed after each guess to help the player make more informed decisions on subsequent guesses. The goal is to minimize the entropy, which will lead to fewer remaining possibilities and a faster solution.
+
+## Requirements
+
+- Python 3.x
+- No external dependencies
+
+## How to Run
+
+1. Ensure you have Python 3 installed on your system.
+2. Clone or download the repository.
+3. Navigate to the directory where the files are located.
+4. Run the game by executing:
+   ```bash
+   python main.py
 
