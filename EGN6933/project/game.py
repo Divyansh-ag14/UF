@@ -1,4 +1,4 @@
-from utilities import EntropyMI, SearchLogic
+from utilities import Entropy, SearchLogic
 
 class BullsAndCowsGame:
 
@@ -37,7 +37,7 @@ class BullsAndCowsGame:
         """
         while True:
 
-            entropy = EntropyMI()
+            entropy = Entropy()
             search_log = SearchLogic(self.get_secret())
 
             # user input

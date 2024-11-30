@@ -1,6 +1,6 @@
 import math
 
-class EntropyMI:
+class Entropy:
 
     def frequecny_mapper(self, values: list) -> dict:
 
@@ -41,7 +41,7 @@ class SearchLogic:
            identifies the number of bulls and cows
         """
         bulls, cows = 0, 0
-        secret_list = list(secret)
+        secret_list = list(secret) # "1234" -> ["1", "2", "3", "4"]
         guess_list = list(guess)
 
         
