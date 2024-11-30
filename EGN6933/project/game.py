@@ -46,11 +46,10 @@ class BullsAndCowsGame:
 
             print(f"\nBulls: {bulls}, Cows: {cows}")
 
-            # calculate the entropy and mutual information for the remaining possible secrets
+            # calculate the entropy for the remaining possible secrets
             remaining_secrets = [s for s in self.total_secrets if search_log.check_bac(s, guess) == (bulls, cows)]
 
             entropy_of_remaining_secrets = entropy.get_entropy(remaining_secrets)
-            #mutual_information = entropy.get_mi(remaining_secrets, [guess])
 
             print(f"Entropy of remaining secrets: {entropy_of_remaining_secrets}")
             print("---------------------------")
