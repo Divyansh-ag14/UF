@@ -27,7 +27,7 @@ This project implements the game in Python, with additional functionality for ca
 ### **3. `utilities.py`**
 - **Purpose**: Contains utility classes to handle entropy calculations and determine bulls and cows for a guess.
 - **Key Classes**:
-  - **`EntropyMI`**: Provides functionality for calculating the entropy of the remaining possible secret numbers.
+  - **`Entropy`**: Provides functionality for calculating the entropy of the remaining possible secret numbers.
   - **`SearchLogic`**: Handles the comparison of a guess to the secret and returns the number of bulls and cows.
 - **Key Methods**:
   - **`get_entropy(values)`**: Calculates entropy based on the remaining possible secrets, helping the player make more informed guesses.
