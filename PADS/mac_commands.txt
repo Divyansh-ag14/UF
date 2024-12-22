@@ -1,0 +1,4 @@
+create venv: python3 -m venv ./venv
+ativate venv: source venv/bin/activate
+deactivate venv: deactivate
+delete venv: rm -rf venv/ 
